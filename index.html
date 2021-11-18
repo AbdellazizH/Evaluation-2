@@ -9,8 +9,188 @@
   <title>Créer un site web avec HTML, CSS et le framework Bootstrap</title>
 </head>
 <body>
-  <div>
-    <h1>Mon site web</h1>
+
+  <div 
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    id="bookingConfirm"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmation de la réservation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <p>Confirmez-vous la réservation pour le voyage à Oahu ?</p>
+        </div>
+        
+        <div class="modal-footer">          
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+            J'ai changé d'avis
+          </button>
+          <button type="button" class="btn btn-success">
+            Oui, confirmer la réservation
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <h1>Mon site web</h1>
+
+  <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+    <a href="#" class="navbar-brand">Mon super site</a>
+
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="16" 
+      height="16" 
+      fill="currentColor" 
+      class="bi bi-three-dots-vertical" 
+      viewbox="0 0 16 16"
+    >
+      <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Compétences</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#">Science</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#">2018</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Molecular structures made simple
+      </li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="card">
+      <img src="oahu.jpg" alt="Oahu" class="card-img-top" style="margin: auto; width: 75%; height: 50%;">
+      <div class="card-body">
+        <h5 class="card-title">Oahu (Hawaï)</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro culpa quaerat, deserunt odit omnis sit incidunt non consectetur officia nam sed sapiente, quasi soluta architecto dicta reiciendis alias nostrum earum?
+        </p>
+
+        <button 
+          type="button" 
+          class="btn btn-primary" 
+          data-toggle="modal" 
+          data-target="#bookingConfirm"
+        >
+          Réserver mon voyage
+        </button>
+      </div>
+    </div>
+
+    <nav aria-label="Pagination">
+      <ul class="pagination">
+        <li class="page-item">
+          <a href="#" class="page-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="16" 
+              fill="currentColor" 
+              class="bi bi-chevron-left"
+              viewbox="0 0 16 16"
+            >
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Précédent
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="#" class="page-link">
+            1
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="#" class="page-link">
+            2
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="#" class="page-link">
+            3
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="#" class="page-link">
+            Suivant
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="16" 
+              fill="currentColor" 
+              class="bi bi-chevron-right" 
+              viewbox="0 0 16 16"
+            >
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+
+  <aside>
+    <h5>Suivez-nous sur les réseaux pour tenter de gagner un voyage!!</h5>
+    <div class="progress">
+      <div 
+        role="progressbar"
+        class="progress-bar bg-success progress-bar-striped"
+        style="width: 90%;"
+        aria-valuenow="9000"
+        aria-valuemin="0"
+        aria-valuemax="1000"
+      >
+        9000 / 10000
+      </div>
+    </div>
+  </aside>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
